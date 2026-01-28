@@ -642,13 +642,6 @@
             </div>
 
             <div class="space-y-4">
-                <!-- Rollback Notice -->
-                <div class="bg-app-accent/20 border border-app-accent/30 rounded-xl p-4 text-center">
-                    <p class="text-[11px] font-mono font-bold text-app-accent uppercase tracking-wider">
-                        macOS version is temporarily unavailable. Fix coming soon.
-                    </p>
-                </div>
-
                 <!-- Windows -->
                 <a target="_blank" href="https://usetoday.short.gy/3xqLHV"
                     class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-app-accent hover:bg-app-accent/5 transition-all group">
@@ -665,10 +658,12 @@
                     </div>
                 </a>
 
-                <!-- Mac (Disabled) -->
-                <div
-                    class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 opacity-50 cursor-not-allowed">
-                    <div class="w-10 h-10 flex items-center justify-center bg-white/5 rounded-lg text-white">
+                <!-- Mac -->
+                <a target="_blank" href="https://usetoday.short.gy/73rdBJ"
+                    onclick="document.getElementById('mac-guide').classList.remove('hidden')"
+                    class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-app-accent hover:bg-app-accent/5 transition-all group">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-white/5 rounded-lg text-white group-hover:text-app-accent transition-colors">
                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                             <path
                                 d="M17.057 12.783c.018 2.583 2.235 3.444 2.259 3.453-.021.073-.349 1.204-1.15 2.373-.695 1.01-1.412 2.016-2.528 2.037-1.096.02-1.448-.65-2.704-.65-1.255 0-1.643.63-2.684.67-1.075.04-1.907-.932-2.603-1.94-1.425-2.059-2.515-5.813-1.046-8.36.73-1.266 2.032-2.067 3.44-2.087 1.075-.02 2.091.728 2.754.728.662 0 1.892-.897 3.174-.77 1.019.043 1.946.516 2.553 1.144a4.426 4.426 0 0 0-3.665 3.402zM14.61 4.542c.578-.7 1.037-1.666.93-2.632-1.246.012-2.413.784-3.13 1.63-.64.747-1.201 1.745-1.05 2.683 1.341.11 2.454-.783 3.25-1.681z" />
@@ -676,13 +671,33 @@
                     </div>
                     <div>
                         <div class="text-white font-medium">macOS (Apple Silicon)</div>
-                        <div class="text-[10px] text-app-accent font-mono uppercase tracking-widest mt-0.5">Rolling Back
-                        </div>
+                        <div class="text-xs text-app-muted">Latest Beta Build</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- macOS Installation Guide -->
                 <div id="mac-guide" class="hidden mt-4 animate-fade-in">
+                    <!-- Damaged App Warning -->
+                    <div class="mb-4 p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+                        <p class="text-[11px] text-red-400 font-bold mb-2 uppercase tracking-wider">⚠️ Important for Mac
+                            Users</p>
+                        <p class="text-[11px] text-app-muted leading-relaxed mb-3">
+                            If you see: <span class="text-white italic">"Today" is damaged and can't be opened. You
+                                should move it to the Bin.</span>
+                        </p>
+                        <a href="https://drive.google.com/file/d/1PJc5UAJgT_ocoPqYrE9qy-wgtXq6pUdR/view?usp=sharing"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-500/20 text-red-400 text-[10px] font-bold hover:bg-red-500/30 transition-colors">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            WATCH QUICK FIX VIDEO
+                        </a>
+                    </div>
+
                     <div class="flex items-center gap-2 mb-3 px-1">
                         <div class="h-px flex-1 bg-white/10"></div>
                         <span class="text-[10px] font-mono text-app-muted uppercase tracking-widest">Installation
@@ -719,6 +734,9 @@
                                 </div>
                             </li>
                         </ol>
+                        <p class="mt-4 text-[10px] text-white/40 font-mono text-center">
+                            If any issue feel free to ping or comment below!
+                        </p>
                     </div>
                 </div>
             </div>
