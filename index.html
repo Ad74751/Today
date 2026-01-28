@@ -129,6 +129,7 @@
 </head>
 
 <body class="antialiased selection:bg-app-accent/20 selection:text-app-accent">
+    <!-- Rollback Banner -->
 
     <nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -641,6 +642,13 @@
             </div>
 
             <div class="space-y-4">
+                <!-- Rollback Notice -->
+                <div class="bg-app-accent/20 border border-app-accent/30 rounded-xl p-4 text-center">
+                    <p class="text-[11px] font-mono font-bold text-app-accent uppercase tracking-wider">
+                        macOS version is temporarily unavailable. Fix coming soon.
+                    </p>
+                </div>
+
                 <!-- Windows -->
                 <a target="_blank" href="https://usetoday.short.gy/3xqLHV"
                     class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-app-accent hover:bg-app-accent/5 transition-all group">
@@ -657,12 +665,10 @@
                     </div>
                 </a>
 
-                <!-- Mac -->
-                <a target="_blank" href="https://usetoday.short.gy/73rdBJ"
-                    onclick="document.getElementById('mac-guide').classList.remove('hidden')"
-                    class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-app-accent hover:bg-app-accent/5 transition-all group">
-                    <div
-                        class="w-10 h-10 flex items-center justify-center bg-white/5 rounded-lg text-white group-hover:text-app-accent transition-colors">
+                <!-- Mac (Disabled) -->
+                <div
+                    class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 opacity-50 cursor-not-allowed">
+                    <div class="w-10 h-10 flex items-center justify-center bg-white/5 rounded-lg text-white">
                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                             <path
                                 d="M17.057 12.783c.018 2.583 2.235 3.444 2.259 3.453-.021.073-.349 1.204-1.15 2.373-.695 1.01-1.412 2.016-2.528 2.037-1.096.02-1.448-.65-2.704-.65-1.255 0-1.643.63-2.684.67-1.075.04-1.907-.932-2.603-1.94-1.425-2.059-2.515-5.813-1.046-8.36.73-1.266 2.032-2.067 3.44-2.087 1.075-.02 2.091.728 2.754.728.662 0 1.892-.897 3.174-.77 1.019.043 1.946.516 2.553 1.144a4.426 4.426 0 0 0-3.665 3.402zM14.61 4.542c.578-.7 1.037-1.666.93-2.632-1.246.012-2.413.784-3.13 1.63-.64.747-1.201 1.745-1.05 2.683 1.341.11 2.454-.783 3.25-1.681z" />
@@ -670,9 +676,10 @@
                     </div>
                     <div>
                         <div class="text-white font-medium">macOS (Apple Silicon)</div>
-                        <div class="text-xs text-app-muted">Latest Beta Build</div>
+                        <div class="text-[10px] text-app-accent font-mono uppercase tracking-widest mt-0.5">Rolling Back
+                        </div>
                     </div>
-                </a>
+                </div>
 
                 <!-- macOS Installation Guide -->
                 <div id="mac-guide" class="hidden mt-4 animate-fade-in">
