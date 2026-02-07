@@ -137,24 +137,45 @@
                 <img src="./assets/48x48.png" alt="Today Logo" width="32" height="32">
                 <span class="text-xl font-bold tracking-tight">Today.</span>
             </div>
-            <div class="hidden md:flex items-center gap-6 text-xs font-mono uppercase tracking-widest text-app-muted">
+
+            <!-- Desktop Menu -->
+            <div
+                class="hidden md:flex items-center gap-6 text-[10px] font-mono uppercase tracking-widest text-app-muted">
                 <a href="#features" class="hover:text-white transition-colors">Features</a>
                 <a href="#philosophy" class="hover:text-white transition-colors">Manifesto</a>
-                <a href="javascript:openModal()"
-                    class="bg-white text-black hover:bg-white/90 px-4 py-1.5 rounded font-bold transition-colors">Get
-                    Beta</a>
+                <div class="flex items-center gap-4">
+                    <a href="javascript:openModal()"
+                        class="bg-white text-black hover:bg-white/90 px-4 py-1.5 rounded font-bold transition-colors">Get
+                        Beta</a>
+                    <a href="https://www.producthunt.com/products/today-15/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-today&#0045;15"
+                        target="_blank">
+                        <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1153972&theme=light"
+                            alt="Today - Product Hunt" style="height: 32px; width: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="flex md:hidden items-center gap-4">
+
+                <button id="mobile-menu-toggle" class="text-white p-1" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-20 overflow-hidden">
+        <section class="relative min-h-screen flex flex-col items-center justify-start pt-20 pb-20 overflow-hidden">
 
             <div
                 class="absolute top-[0%] left-[50%] -translate-x-1/2 w-[800px] h-[500px] bg-app-accent/10 rounded-full blur-[120px] pointer-events-none opacity-60">
             </div>
 
-            <article class="container mx-auto px-6 relative z-10 text-center mb-16 max-w-4xl">
+            <article class="container mx-auto px-6 relative z-10 text-center mb-2 max-w-4xl">
                 <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-8 animate-fade-in">
                     <span class="flex h-2 w-2 relative">
@@ -178,15 +199,8 @@
                     day, locked at
                     midnight, so you can move forward instead of fixing the past.
                 </p>
-                <div class="flex items-center justify-center animate-slide-up mb-3" style="animation-delay: 0.2s;">
-                    <a href="https://www.producthunt.com/products/today-15/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-today&#0045;15"
-                        target="_blank"><img
-                            src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1153972&theme=light"
-                            alt="Today - Stop&#0032;managing&#0032;notes | Product Hunt"
-                            style="width: 250px; height: 54px;" width="250" height="54" /></a>
-                </div>
-
-                <div class="flex items-center justify-center animate-slide-up" style="animation-delay: 0.2s;">
+                <div class="flex flex-col items-center justify-center animate-slide-up mb-12"
+                    style="animation-delay: 0.3s;">
                     <button onclick="openModal()" aria-label="Join the Beta and start writing today"
                         class="relative px-12 py-5 bg-white text-black hover:bg-app-accent hover:text-white font-bold rounded-full transition-all duration-500 shadow-[0_10px_40px_rgba(255,255,255,0.1)] hover:shadow-[0_20px_60px_rgba(255,92,0,0.3)] flex items-center justify-center gap-3 group overflow-hidden">
                         <span class="text-lg tracking-tight relative z-10">Start Writing Today</span>
@@ -200,7 +214,11 @@
                             class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out">
                         </div>
                     </button>
+
                 </div>
+
+
+
             </article>
 
             <div class="w-full max-w-[1100px] px-4 animate-slide-up relative group" style="animation-delay: 0.4s;"
@@ -713,6 +731,88 @@
             </p>
         </div>
     </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[200] hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/98 backdrop-blur-3xl" id="mobile-menu-bg"></div>
+
+        <div class="relative h-full flex flex-col p-8 pt-24 items-center justify-start max-w-lg mx-auto w-full">
+            <button id="mobile-menu-close"
+                class="absolute top-6 right-6 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+                aria-label="Close Menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Menu Content -->
+            <div class="w-full flex flex-col gap-1 pr-12">
+                <div class="text-[10px] font-mono text-app-muted uppercase tracking-[0.4em] mb-8 opacity-40">Navigation
+                </div>
+                <a href="#features"
+                    class="text-4xl font-serif text-white hover:text-app-accent transition-colors py-4 border-b border-white/5 mobile-link">Features</a>
+                <a href="#philosophy"
+                    class="text-4xl font-serif text-white hover:text-app-accent transition-colors py-4 border-b border-white/5 mobile-link">Manifesto</a>
+
+                <div class="mt-12 text-[10px] font-mono text-app-muted uppercase tracking-[0.4em] mb-6 opacity-40">
+                    Social Proof</div>
+                <a href="https://www.producthunt.com/products/today-15/reviews/new" target="_blank"
+                    class="mobile-link group flex flex-col gap-3">
+                    <span
+                        class="text-white/60 font-mono text-xs tracking-wider group-hover:text-white transition-colors">We're
+                        on Product Hunt &rarr;</span>
+                    <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1153972&theme=light"
+                        alt="Today - Product Hunt" style="height: 48px; width: auto;"
+                        class="opacity-90 grayscale group-hover:grayscale-0 transition-all duration-500" />
+                </a>
+            </div>
+
+            <!-- Footer in Menu -->
+            <div class="absolute bottom-12 left-8 right-8 text-center text-[10px] font-mono text-app-muted opacity-40">
+                &copy; 2026 TEAM TODAY. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </div>
+    <script>
+        // Mobile Menu toggle logic
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('opacity-0');
+                    mobileMenu.classList.add('opacity-100');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('opacity-100');
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        menuToggle.addEventListener('click', () => {
+            console.log('Menu Toggle Clicked');
+            toggleMenu(true);
+        });
+        menuClose.addEventListener('click', () => toggleMenu(false));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // Add Escape key support for mobile menu as well
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                toggleMenu(false);
+            }
+        });
+    </script>
 </body>
 
 </html>
