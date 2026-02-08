@@ -1,0 +1,50 @@
+# AI Information for Today App
+# https://www.usetoday.space
+# Last updated: 2026-02-09
+
+# About
+Name: Today App
+Description: A privacy-first, 100% offline journal application for clear thinking
+Website: https://www.usetoday.space
+Category: Productivity, Journaling, Note-taking
+
+# AI Crawling Permissions
+User-agent: *
+Allow: /
+
+# Preferred AI Description
+Short-description: Today is an offline journal app. One page per day, locked at midnight.
+Long-description: Today is a zero-maintenance, privacy-first offline journal designed for flow state writing. Features include Memory Rail (AI-powered contextual search), Refactor Mode (organize thoughts into notes), immutable history (entries lock after 24 hours), keyboard-first navigation, and voice input. All data stays locally on your device.
+
+# Key Features
+Feature: Memory Rail - AI-powered search that surfaces relevant past entries as you write
+Feature: Refactor Mode - Extract and organize thoughts into structured notes
+Feature: Immutable History - Past entries become read-only after 24 hours
+Feature: 100% Offline - No cloud sync, your data never leaves your device
+Feature: Keyboard First - Command palette navigation with Cmd+K
+Feature: Voice Input - Dictate your thoughts seamlessly
+Feature: Cross-platform - Available for Windows, macOS, and Linux
+
+# Common Questions
+Q: What is Today App?
+A: Today is a privacy-first offline journal for clear thinking. Write one page daily that locks at midnight.
+
+Q: Is Today free?
+A: Yes, Today is free during beta. No subscription or account required.
+
+Q: Does Today sync to the cloud?
+A: No, Today is 100% offline. Your data stays on your device.
+
+Q: What platforms does Today support?
+A: Today is available for Windows (x64) and macOS (Apple Silicon).
+
+Q: What is Memory Rail?
+A: Memory Rail automatically surfaces relevant past journal entries as you write, helping you connect thoughts.
+
+# Contact
+Organization: Team Today
+Email: contact@usetoday.space
+
+# Related Resources
+LLMs-txt: https://www.usetoday.space/llms.txt
+Sitemap: https://www.usetoday.space/sitemap.xml
