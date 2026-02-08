@@ -15,10 +15,15 @@
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://www.usetoday.space/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Today App">
+    <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Today App: Your Offline Journal for Clear Thinking">
     <meta property="og:description"
         content="Stop managing notes and start thinking. Today offers a simple, offline journal with smart search and immutable history. Try the beta today!">
     <meta property="og:image" content="https://www.usetoday.space/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Today App - Your Offline Journal for Clear Thinking">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -47,25 +52,79 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
-    <!-- Structured Data -->
+    <!-- Structured Data - Organization/Identity Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Team Today",
+      "url": "https://www.usetoday.space",
+      "logo": "https://www.usetoday.space/assets/48x48.png",
+      "description": "We build tools that help you think, not manage notes. Today is our flagship offline journal application.",
+      "foundingDate": "2025",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data - Software Application Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Today",
+      "url": "https://www.usetoday.space",
+      "image": "https://www.usetoday.space/preview.png",
+      "screenshot": [
+        "https://www.usetoday.space/assets/1.png",
+        "https://www.usetoday.space/assets/2.png",
+        "https://www.usetoday.space/assets/3.png"
+      ],
       "operatingSystem": "Windows, macOS, Linux",
       "applicationCategory": "ProductivityApplication",
-      "description": "Today is a zero-maintenance 100% offline journal built to help you think, not manage notes. One page a day, locked at midnight.",
+      "applicationSubCategory": "Journal, Note-taking, Personal Knowledge Management",
+      "description": "Today is a zero-maintenance 100% offline journal built to help you think, not manage notes. One page a day, locked at midnight. Features include Memory Rail for intelligent search, Refactor Mode for organizing thoughts, and immutable history.",
+      "featureList": [
+        "100% Offline - No cloud sync required",
+        "Memory Rail - AI-powered contextual search",
+        "Refactor Mode - Organize thoughts into notes",
+        "Immutable History - Past entries locked after 24 hours",
+        "Keyboard First - Command palette navigation",
+        "Voice Input - Dictate your thoughts",
+        "Dark Mode - Optimized for focus"
+      ],
+      "softwareVersion": "1.0.0-beta.1",
+      "releaseNotes": "Initial beta release with core journaling features",
+      "downloadUrl": "https://www.usetoday.space",
+      "installUrl": "https://www.usetoday.space",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "ratingCount": "100"
+        "ratingCount": "100",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Team Today",
+        "url": "https://www.usetoday.space"
       }
+    }
+    </script>
+
+    <!-- Structured Data - WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Today App",
+      "url": "https://www.usetoday.space",
+      "description": "Your Offline Journal for Clear Thinking"
     }
     </script>
     <script>
@@ -499,19 +558,53 @@
     </main>
 
     <footer class="py-20 border-t border-white/5 bg-[#050505]">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="flex items-center gap-3">
-
-                <div class="flex items-center gap-2">
-                    <img src="./assets/48x48.png" alt="Today" width="32" height="32">
-                    <span class="font-sans font-bold text-white block  text-xl leading-none">Today.</span>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/48x48.png" alt="Today App Logo - Offline Journal" width="32" height="32">
+                        <span class="font-sans font-bold text-white block text-xl leading-none">Today.</span>
+                    </div>
                 </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-6">
+                    <a href="https://www.producthunt.com/products/today-15" target="_blank" rel="noopener noreferrer"
+                        class="text-white/40 hover:text-app-accent transition-colors"
+                        aria-label="Today on Product Hunt">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M13.337 9H10V15H11.5V12.75H13.337C14.254 12.75 15 12.004 15 11.087V10.663C15 9.746 14.254 9 13.337 9ZM13.5 11.087C13.5 11.176 13.426 11.25 13.337 11.25H11.5V10.5H13.337C13.426 10.5 13.5 10.574 13.5 10.663V11.087Z" />
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM4 12C4 7.582 7.582 4 12 4C16.418 4 20 7.582 20 12C20 16.418 16.418 20 12 20C7.582 20 4 16.418 4 12Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                        class="text-white/40 hover:text-app-accent transition-colors" aria-label="Today on X (Twitter)">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-xs font-mono text-white/40 uppercase tracking-widest"
+                    aria-label="Footer Navigation">
+                    <p>Made with ❤️ by Team Today</p>
+                    <p>&copy; 2025-2026 Today App. All rights reserved.</p>
+                </nav>
             </div>
 
-            <nav class="flex gap-8 text-xs font-mono text-white/40 uppercase tracking-widest"
-                aria-label="Footer Navigation">
-                <p>Made with ❤️ by team Today.</p>
-            </nav>
+            <!-- Additional SEO Footer Content -->
+            <div class="mt-12 pt-8 border-t border-white/5 text-center">
+                <p class="text-xs text-white/20 max-w-2xl mx-auto">
+                    Today is a privacy-first offline journal app for Windows, macOS, and Linux. Features include Memory
+                    Rail for smart search,
+                    Refactor Mode for organizing thoughts, immutable history, and keyboard-first navigation. Your data
+                    stays on your device.
+                </p>
+            </div>
         </div>
     </footer>
 

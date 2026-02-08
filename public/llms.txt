@@ -1,0 +1,40 @@
+# Today App - LLM Context File
+# https://www.usetoday.space
+
+## About Today
+Today is a zero-maintenance, 100% offline journal application designed to help you think clearly without the burden of managing notes. Built for flow state and focused thinking.
+
+## Core Philosophy
+- One page per day, locked at midnight
+- Immutable history - past entries cannot be edited after 24 hours
+- Privacy-first - all data stored locally on your device
+- Keyboard-first navigation with command palette (Cmd+K)
+- No cloud sync, no accounts, no data collection
+
+## Key Features
+- Memory Rail: AI-powered contextual search that surfaces relevant past entries as you write
+- Refactor Mode: Extract and organize thoughts into structured notes
+- Voice Input: Dictate your thoughts seamlessly
+- Markdown support with rich text formatting
+- Dark mode optimized interface
+- Cross-platform: Windows, macOS, Linux
+
+## Target Users
+- Individuals seeking a distraction-free journaling experience
+- Knowledge workers who value privacy and offline-first tools
+- People tired of complex note-taking systems
+- Those who want to focus on thinking, not organizing
+
+## Technical Details
+- Desktop application built with Electron
+- Local vector search for intelligent content surfacing
+- No external API calls for core functionality
+- Data stored in local SQLite database
+
+## Links
+- Website: https://www.usetoday.space
+- Download: https://www.usetoday.space (Windows & macOS)
+- Product Hunt: https://www.producthunt.com/products/today-15
+
+## Contact
+Team Today
