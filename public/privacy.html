@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Privacy Policy - Today App</title>
+    <meta name="title" content="Privacy Policy - Today App">
+    <meta name="description"
+        content="Privacy Policy for Today App. We believe your thoughts belong to you. No data collection, 100% offline.">
+
+    <!-- Browser Themes & Icons -->
+    <meta name="theme-color" content="#050505">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../assets/icon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        app: {
+                            bg: '#050505',
+                            surface: '#09090b',
+                            card: '#121214',
+                            accent: '#ff5c00',
+                            accentHover: '#ff7a33',
+                            border: '#27272a',
+                            text: '#e4e4e7',
+                            muted: '#a1a1aa'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                @apply bg-[#09090b]/60 backdrop-blur-xl border border-white/10;
+            }
+            .glass-card {
+                @apply bg-[#0c0c0e] border border-white/5 hover:border-app-accent/30 transition-all duration-300;
+            }
+        }
+        body {
+            background-color: #050505;
+            color: #e4e4e7;
+            background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 60%);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-app-accent/20 selection:text-app-accent min-h-screen flex flex-col">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="../index.html"
+                class="flex items-center gap-3 hover:opacity-100 transition-opacity cursor-pointer group">
+                <img src="../assets/48x48.png" alt="Today Logo" width="32" height="32">
+                <span class="text-xl font-bold tracking-tight">Today.</span>
+            </a>
+
+            <div class="flex items-center gap-6 text-[10px] font-mono uppercase tracking-widest text-app-muted">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="#" class="text-white font-bold transition-colors">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="mb-12">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-6">
+                    <span class="font-mono text-[10px] text-white/40 tracking-wider uppercase">Last Updated: February
+                        17, 2026</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-serif text-white mb-6">Privacy Policy</h1>
+                <p class="text-xl text-app-muted font-light leading-relaxed">
+                    We built Today because we believe your thoughts belong to you, and only you.
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <section class="glass-card p-8 rounded-2xl">
+                    <h2 class="text-2xl font-serif text-white mb-4 flex items-center gap-3">
+                        <span class="text-app-accent">01.</span> No Data Collection
+                    </h2>
+                    <p class="text-app-muted leading-relaxed mb-4">
+                        Today is a <strong>100% offline application</strong>. We do not collect, store, transmit, or
+                        sell any of your personal data.
+                    </p>
+                    <ul class="list-disc list-inside text-app-muted space-y-2 ml-4">
+                        <li>No analytics tracking</li>
+                        <li>No user accounts</li>
+                        <li>No cloud synchronization</li>
+                        <li>No telemetry</li>
+                    </ul>
+                </section>
+
+                <section class="glass-card p-8 rounded-2xl">
+                    <h2 class="text-2xl font-serif text-white mb-4 flex items-center gap-3">
+                        <span class="text-app-accent">02.</span> Local Storage
+                    </h2>
+                    <p class="text-app-muted leading-relaxed">
+                        All your journal entries, settings, and metadata are stored locally on your device. You have
+                        full control over your data. If you uninstall the application without backing up your data, it
+                        will be permanently lost, as we have no copy of it.
+                    </p>
+                </section>
+
+                <section class="glass-card p-8 rounded-2xl">
+                    <h2 class="text-2xl font-serif text-white mb-4 flex items-center gap-3">
+                        <span class="text-app-accent">03.</span> "As Is" Content
+                    </h2>
+                    <p class="text-app-muted leading-relaxed mb-4">
+                        The software is provided "as is", without warranty of any kind, express or implied, including
+                        but not limited to the warranties of merchantability, fitness for a particular purpose and
+                        noninfringement.
+                    </p>
+                    <p class="text-app-muted leading-relaxed">
+                        In no event shall the authors or copyright holders be liable for any claim, damages or other
+                        liability, whether in an action of contract, tort or otherwise, arising from, out of or in
+                        connection with the software or the use or other dealings in the software.
+                    </p>
+                </section>
+
+                <section class="glass-card p-8 rounded-2xl">
+                    <h2 class="text-2xl font-serif text-white mb-4 flex items-center gap-3">
+                        <span class="text-app-accent">04.</span> Support
+                    </h2>
+                    <p class="text-app-muted leading-relaxed">
+                        As an offline tool built by a small team, <strong>we do not offer official
+                            support</strong>. There is no customer service team or help desk. We encourage users to
+                        backup their data regularly.
+                    </p>
+                </section>
+
+                <section class="glass-card p-8 rounded-2xl">
+                    <h2 class="text-2xl font-serif text-white mb-4 flex items-center gap-3">
+                        <span class="text-app-accent">05.</span> Contact
+                    </h2>
+                    <p class="text-app-muted leading-relaxed">
+                        While we do not offer support, if you find a critical security vulnerability, you may report it
+                        to the maintainers via our social channels.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 bg-[#050505]">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <img src="../assets/48x48.png" alt="Today App Logo" width="24" height="24" class="opacity-50">
+                <span class="font-sans font-bold text-white/50 text-sm">Today.</span>
+            </div>
+            <p class="text-xs font-mono text-white/30 uppercase tracking-widest">
+                &copy; 2025-2026 Today App. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
