@@ -69,6 +69,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--favicon-->
     <link rel="icon" href="./assets/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
@@ -230,6 +231,8 @@
                         'fade-in': 'fadeIn 0.6s ease-out forwards',
                         'slide-up': 'slideUp 0.8s ease-out forwards',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'marquee-up': 'marqueeUp 30s linear infinite',
+                        'marquee-down': 'marqueeDown 30s linear infinite',
                     },
                     keyframes: {
                         fadeIn: {
@@ -239,6 +242,14 @@
                         slideUp: {
                             '0%': { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        marqueeUp: {
+                            '0%': { transform: 'translateY(0)' },
+                            '100%': { transform: 'translateY(-50%)' },
+                        },
+                        marqueeDown: {
+                            '0%': { transform: 'translateY(-50%)' },
+                            '100%': { transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -283,8 +294,8 @@
                 <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
                 <div class="flex items-center gap-4">
                     <a href="javascript:openModal()"
-                        class="bg-white text-black hover:bg-white/90 px-4 py-1.5 rounded font-bold transition-colors">Get
-                        Beta</a>
+                        class="bg-white text-black hover:bg-white/90 px-4 py-1.5 rounded font-bold transition-colors">Download
+                        Apps</a>
                     <a href="https://www.producthunt.com/products/today-15/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-today&#0045;15"
                         target="_blank">
                         <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1153972&theme=light"
@@ -306,8 +317,9 @@
         </div>
     </nav>
 
-    <main>
-        <section class="relative min-h-screen flex flex-col items-center justify-start pt-20 pb-20 overflow-hidden">
+    <main class="flex flex-col">
+        <section
+            class="order-1 relative min-h-screen flex flex-col items-center justify-start pt-20 pb-20 overflow-hidden">
 
             <div
                 class="absolute top-[0%] left-[50%] -translate-x-1/2 w-[800px] h-[500px] bg-app-accent/10 rounded-full blur-[120px] pointer-events-none opacity-60">
@@ -321,11 +333,12 @@
                             class="animate-ping absolute inline-flex h-full w-full rounded-full bg-app-accent opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-app-accent"></span>
                     </span>
-                    <span class="font-mono text-[10px] text-white/60 tracking-wider uppercase">Beta Available Now</span>
+                    <span class="font-mono text-[10px] text-white/60 tracking-wider uppercase">Available on Desktop &
+                        Android</span>
                 </div>
 
                 <h1
-                    class="text-6xl md:text-8xl lg:text-9xl font-medium mb-10 leading-[1.05] animate-slide-up text-balance tracking-tight">
+                    class="text-4xl xs:text-5xl md:text-8xl lg:text-9xl font-medium mb-10 leading-[1.05] animate-slide-up text-balance tracking-tight">
                     Focus on <br />
                     the <span class="text-[#FF4F00] font-serif italic">present.</span>
                 </h1>
@@ -337,7 +350,7 @@
                     day, locked at
                     midnight, so you can move forward instead of fixing the past.
                 </p>
-                <div class="flex flex-col items-center justify-center animate-slide-up mb-12"
+                <div class="flex flex-col sm:flex-row items-center justify-center animate-slide-up mb-12 gap-4"
                     style="animation-delay: 0.3s;">
                     <button onclick="openModal()" aria-label="Join the Beta and start writing today"
                         class="relative px-12 py-5 bg-white text-black hover:bg-app-accent hover:text-white font-bold rounded-full transition-all duration-500 shadow-[0_10px_40px_rgba(255,255,255,0.1)] hover:shadow-[0_20px_60px_rgba(255,92,0,0.3)] flex items-center justify-center gap-3 group overflow-hidden">
@@ -352,88 +365,388 @@
                             class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out">
                         </div>
                     </button>
-
+                    <!-- Android CTA -->
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.atharv.today&hl=en_IN"
+                        aria-label="Download for Android"
+                        class="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-all flex items-center justify-center gap-3 group">
+                        <i
+                            class="fa-brands fa-android text-app-accent group-hover:text-white transition-colors text-2xl"></i>
+                        Get Android App
+                    </a>
                 </div>
 
 
 
             </article>
 
-            <div class="w-full max-w-[1100px] px-4 animate-slide-up relative group" style="animation-delay: 0.4s;"
-                id="carousel-container">
-                <div
-                    class="relative w-full aspect-[16/10] md:aspect-[16/9] rounded-xl shadow-2xl border border-white/10 bg-[#09090b] overflow-hidden">
+            <!-- Promo Video Showcase -->
+            <div class="w-full max-w-5xl mx-auto px-4 mt-8 mb-4 relative z-20 animate-slide-up"
+                style="animation-delay: 0.4s;">
+                <div class="relative group cursor-default">
+                    <!-- Dynamic Glowing Backdrop -->
                     <div
-                        class="absolute top-0 left-0 right-0 h-8 bg-[#09090b]/90 backdrop-blur z-20 flex items-center px-4 border-b border-white/5">
-                        <div class="flex gap-2">
-                            <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" aria-hidden="true"></div>
-                            <div class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" aria-hidden="true"></div>
-                            <div class="w-2.5 h-2.5 rounded-full bg-[#28C840]" aria-hidden="true"></div>
-                        </div>
-                        <div class="absolute left-0 right-0 text-center text-[10px] font-mono text-white/20 uppercase">
-                            Today
-                        </div>
+                        class="absolute -inset-1 bg-gradient-to-r from-[#ff5c00] via-[#ff7a33] to-[#ff5c00] rounded-[2.5rem] blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-500">
                     </div>
 
-                    <div id="carousel-track"
-                        class="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
-                        <div class="min-w-full h-full relative bg-[#050505]">
-                            <img src="./assets/1.png" class="absolute inset-0 w-full h-full object-contain pt-8"
-                                alt="Today App Main Interface - Clean and focused writing environment">
-                        </div>
-                        <div class="min-w-full h-full relative bg-[#050505]">
-                            <img src="./assets/2.png" class="absolute inset-0 w-full h-full object-contain pt-8"
-                                alt="Today App Memory Rail - Surfacing past thoughts as you write">
-                        </div>
-                        <div class="min-w-full h-full relative bg-[#050505]">
-                            <img src="./assets/3.png" class="absolute inset-0 w-full h-full object-contain pt-8"
-                                alt="Today App Refactor Mode - Organizing chaos into structured knowledge">
-                        </div>
-                        <div class="min-w-full h-full relative bg-[#050505]">
-                            <img src="./assets/4.png" class="absolute inset-0 w-full h-full object-contain pt-8"
-                                alt="Today App Command Palette - Keyboard first navigation">
-                        </div>
-                        <div class="min-w-full h-full relative bg-[#050505]">
-                            <img src="./assets/5.png" class="absolute inset-0 w-full h-full object-contain pt-8"
-                                alt="Today App Immutable History - Data privacy and persistence">
-                        </div>
-                        <div class="min-w-full h-full relative bg-[#050505]">
-                            <img src="./assets/6.png" class="absolute inset-0 w-full h-full object-contain pt-8"
-                                alt="Today App Voice Input - Seamlessly dictate your thoughts">
-                        </div>
-                    </div>
-
+                    <!-- Hardware Frame Structure -->
                     <div
-                        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none">
+                        class="relative rounded-[2.5rem] p-[1.5px] bg-gradient-to-br from-white/30 via-white/5 to-white/20 backdrop-blur-3xl overflow-hidden shadow-[0_30px_100px_rgba(255,122,51,0.15)] transition-transform duration-700 hover:scale-[1.015]">
+                        <div
+                            class="relative bg-[#050505] rounded-[2.4rem] overflow-hidden aspect-[16/9] shadow-inner group/video">
+                            <video id="promo-video" class="w-full h-full object-cover cursor-pointer" loop playsinline
+                                onclick="togglePromoVideo()">
+                                <source src="./video/Today%20Video%201.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+
+                            <!-- Play Button Overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <button id="promo-play-btn" onclick="togglePromoVideo()"
+                                    class="w-24 h-24 bg-app-accent hover:bg-opacity-90 text-white rounded-full flex items-center justify-center transition-all duration-500 hover:scale-110 pointer-events-auto z-10 shadow-[0_0_60px_rgba(255,92,0,0.6)] group/play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <button id="prevBtn" aria-label="Previous slide"
-                        class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full glass-button flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer hover:scale-105">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button id="nextBtn" aria-label="Next slide"
-                        class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full glass-button flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer hover:scale-105">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                    <script>
+                        function togglePromoVideo() {
+                            const video = document.getElementById('promo-video');
+                            const playBtn = document.getElementById('promo-play-btn');
 
-                    <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-30" id="indicators">
-                    </div>
-                </div>
-
-                <div class="text-center mt-6">
-                    <p id="slide-caption"
-                        class="text-xs font-mono text-app-muted uppercase tracking-widest transition-opacity duration-300">
-                        Your Daily Interface
-                    </p>
+                            if (video.paused) {
+                                video.play();
+                                playBtn.style.opacity = '0';
+                                playBtn.style.pointerEvents = 'none';
+                            } else {
+                                video.pause();
+                                playBtn.style.opacity = '1';
+                                playBtn.style.pointerEvents = 'auto';
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="py-32 relative bg-[#050505]">
+        <!-- Desktop App Section -->
+        <section id="desktop-app"
+            class="order-3 py-20 md:py-32 relative bg-[#09090b] border-t border-white/5 overflow-hidden">
+            <div
+                class="absolute left-0 top-1/4 w-[600px] h-[600px] bg-app-accent/5 rounded-full blur-[150px] pointer-events-none opacity-40">
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16 xl:gap-24">
+                    <div class="w-full lg:w-1/2">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-app-accent/30 bg-app-accent/10 mb-8">
+                            <span class="flex h-2 w-2 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-app-accent opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-app-accent"></span>
+                            </span>
+                            <span class="font-mono text-[10px] text-app-accent tracking-wider uppercase">Native Desktop
+                                Experience</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Built for<br> <span
+                                class="text-app-accent italic">deep focus.</span></h2>
+                        <p class="text-app-muted text-lg mb-8 font-light leading-relaxed">
+                            A beautifully native, keyboard-first desktop application designed with zero distractions.
+                            Your thoughts, seamlessly organized.
+                        </p>
+
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 mb-10 text-left">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-wand-magic-sparkles text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Memory Rail</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Surfaces relevant past entries.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-keyboard text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Keyboard First</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Navigate without the mouse.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-wifi text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">100% Offline</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Absolute privacy, zero sync
+                                        required.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-lock text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Immutable History</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Entries lock after 24 hours.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="openModal()"
+                                class="px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center gap-3 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                                <i class="fa-brands fa-apple text-xl"></i>
+                                <i class="fa-brands fa-windows text-xl"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2">
+                        <div class="w-full animate-slide-up relative group" id="carousel-container">
+                            <div
+                                class="relative w-full aspect-[16/10] md:aspect-[16/9] rounded-xl shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/10 bg-[#0c0c0e] overflow-hidden hover:border-white/20 transition-colors duration-500">
+                                <div
+                                    class="absolute top-0 left-0 right-0 h-8 bg-[#0c0c0e]/90 backdrop-blur z-20 flex items-center px-4 border-b border-white/5">
+                                    <div class="flex gap-2">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F57] shadow-sm" aria-hidden="true">
+                                        </div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E] shadow-sm" aria-hidden="true">
+                                        </div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-[#28C840] shadow-sm" aria-hidden="true">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 right-0 text-center text-[10px] font-mono text-white/30 uppercase tracking-widest">
+                                        Today Desktop
+                                    </div>
+                                </div>
+
+                                <div id="carousel-track"
+                                    class="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                                    <div class="min-w-full h-full relative bg-[#050505]">
+                                        <img src="./assets/1.png"
+                                            class="absolute inset-0 w-full h-full object-contain pt-8"
+                                            alt="Today App Main Interface">
+                                    </div>
+                                    <div class="min-w-full h-full relative bg-[#050505]">
+                                        <img src="./assets/2.png"
+                                            class="absolute inset-0 w-full h-full object-contain pt-8"
+                                            alt="Today App Memory Rail">
+                                    </div>
+                                    <div class="min-w-full h-full relative bg-[#050505]">
+                                        <img src="./assets/3.png"
+                                            class="absolute inset-0 w-full h-full object-contain pt-8"
+                                            alt="Today App Refactor Mode">
+                                    </div>
+                                    <div class="min-w-full h-full relative bg-[#050505]">
+                                        <img src="./assets/4.png"
+                                            class="absolute inset-0 w-full h-full object-contain pt-8"
+                                            alt="Today App Command Palette">
+                                    </div>
+                                    <div class="min-w-full h-full relative bg-[#050505]">
+                                        <img src="./assets/5.png"
+                                            class="absolute inset-0 w-full h-full object-contain pt-8"
+                                            alt="Today App Immutable History">
+                                    </div>
+                                    <div class="min-w-full h-full relative bg-[#050505]">
+                                        <img src="./assets/6.png"
+                                            class="absolute inset-0 w-full h-full object-contain pt-8"
+                                            alt="Today App Voice Input">
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none">
+                                </div>
+
+                                <button id="prevBtn" aria-label="Previous slide"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass-button flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all z-30 cursor-pointer hover:scale-110 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                                    <svg class="w-5 h-5 ml-[-2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button id="nextBtn" aria-label="Next slide"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass-button flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all z-30 cursor-pointer hover:scale-110 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                                    <svg class="w-5 h-5 mr-[-2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+
+                                <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-30 scale-75"
+                                    id="indicators"></div>
+                            </div>
+
+                            <div class="text-center mt-6">
+                                <div
+                                    class="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                                    <p id="slide-caption"
+                                        class="text-xs font-mono text-white/70 uppercase tracking-widest transition-opacity duration-300">
+                                        Your Daily Interface
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobile-app"
+            class="order-2 py-20 md:py-32 relative bg-[#09090b] border-t border-white/5 overflow-hidden">
+            <div
+                class="absolute -right-40 -top-40 w-[600px] h-[600px] bg-app-accent/10 rounded-full blur-[100px] pointer-events-none opacity-40">
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-16 xl:gap-24">
+                    <div class="w-full lg:w-1/2">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-app-accent/30 bg-app-accent/10 mb-8">
+                            <span class="flex h-2 w-2 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-app-accent opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-app-accent"></span>
+                            </span>
+                            <span class="font-mono text-[10px] text-app-accent tracking-wider uppercase">New Mobile
+                                App</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Your thoughts,<br> <span
+                                class="text-app-accent">now in your pocket.</span></h2>
+                        <p class="text-app-muted text-lg mb-8 font-light leading-relaxed">
+                            The exact same offline, zero-maintenance philosophy—rebuilt zero-compromise for Android.
+                            Write the moment inspiration strikes.
+                        </p>
+
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 mb-10">
+                            <!-- Memory Rail AI -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-wand-magic-sparkles text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Memory Rail AI</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Private AI suggestions as you type.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Smart Reminders -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-bell text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Smart Reminders</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Smart notifications for your tasks.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Beautiful Widgets -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-shapes text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Beautiful Widgets</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Modern widgets for your home
+                                        screen.</p>
+                                </div>
+                            </li>
+
+                            <!-- Universal Search -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-magnifying-glass text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Universal Search</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Lightning-fast semantic search.</p>
+                                </div>
+                            </li>
+
+                            <!-- Truly Yours -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-font text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Truly Yours</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Premium fonts for your liking.</p>
+                                </div>
+                            </li>
+
+                            <!-- Backup & Restore -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-cloud-arrow-up text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Backup & Restore</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Secure data backup and migration.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Export Anywhere -->
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-file-export text-white/30 text-sm mt-1 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-white/90 font-medium text-sm mb-0.5">Export Anywhere</h4>
+                                    <p class="text-white/40 text-xs leading-relaxed">Full control of your journal data.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a target="_blank"
+                                href="https://play.google.com/store/apps/details?id=com.atharv.today&hl=en_IN"
+                                class="px-6 py-3 bg-app-accent text-white font-bold rounded-xl hover:bg-opacity-90 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(255,92,0,0.3)] hover:shadow-[0_0_30px_rgba(255,92,0,0.5)]">
+                                <i class="fa-brands fa-android text-xl"></i>
+                                Android App
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 h-[600px] overflow-hidden relative"
+                        style="-webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);">
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Column 1: Scrolling Up -->
+                            <div class="flex flex-col gap-4 animate-marquee-up hover:[animation-play-state:paused]">
+                                <img src="./screenshots/flutter_01.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_04.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_03.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <!-- Duplicates for seamless loop -->
+                                <img src="./screenshots/flutter_01.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_04.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_03.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                            </div>
+
+                            <!-- Column 2: Scrolling Down -->
+                            <div class="flex flex-col gap-4 animate-marquee-down hover:[animation-play-state:paused]">
+                                <img src="./screenshots/flutter_02.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_05.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_06.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <!-- Duplicates for seamless loop -->
+                                <img src="./screenshots/flutter_02.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_05.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                                <img src="./screenshots/flutter_06.png" alt="Today App UI"
+                                    class="rounded-[2rem] border-[6px] border-[#27272a]/50 shadow-2xl object-cover w-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="order-4 py-32 relative bg-[#050505]">
             <div class="container mx-auto px-6">
                 <div class="mb-20">
                     <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">Designed for <span
@@ -575,8 +888,10 @@
             </div>
         </section>
 
+
+
         <!-- Featured Video Section -->
-        <section class="py-32 relative bg-[#050505] border-t border-white/5">
+        <section class="order-5 py-32 relative bg-[#050505] border-t border-white/5">
             <div class="container mx-auto px-6">
                 <div class="mb-12 text-center">
                     <div
@@ -607,7 +922,7 @@
         </section>
 
         <!-- Manifesto Section -->
-        <section id="philosophy" class="py-32 relative bg-[#050505] border-t border-white/5">
+        <section id="philosophy" class="order-6 py-32 relative bg-[#050505] border-t border-white/5">
             <div class="absolute inset-0 bg-app-accent/5 pointer-events-none"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="mb-20 text-center">
@@ -869,7 +1184,19 @@
                     of Today.</p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.atharv.today&hl=en_IN"
+                    class="flex items-center gap-4 p-4 rounded-xl bg-app-accent/10 border border-app-accent/20 hover:border-app-accent hover:bg-app-accent/20 transition-all group">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-app-accent/20 rounded-lg text-app-accent group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-android text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-white font-medium">Android (Google Play)</div>
+                        <div class="text-xs text-app-accent">Download for Android</div>
+                    </div>
+                </a>
+
                 <!-- Windows -->
                 <a target="_blank" href="https://usetoday.short.gy/3xqLHV"
                     class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-app-accent hover:bg-app-accent/5 transition-all group">
