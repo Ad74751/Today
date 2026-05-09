@@ -10,7 +10,8 @@
     <meta name="title" content="Today — The Private Journal That Doesn't Let You Live in the Past">
     <meta name="description"
         content="47 tabs open in your brain? Today closes them. The only private, 100% offline journal that locks at midnight to turn your overthinking into daily momentum. Zero tracking, zero cloud, total clarity.">
-    <meta name="keywords" content="journaling app, private journal, offline notes, mental clarity, productivity tool, focus app, daily reflection, secure notes">
+    <meta name="keywords"
+        content="journaling app, private journal, offline notes, mental clarity, productivity tool, focus app, daily reflection, secure notes">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.usetoday.space/">
 
@@ -22,15 +23,17 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.usetoday.space/">
     <meta property="og:title" content="Today — Close the 47 Tabs in Your Brain.">
-    <meta property="og:description" content="The only private, offline journal that locks at midnight to keep you moving forward. 100% private. 100% focused.">
-    <meta property="og:image" content="https://www.usetoday.space/preview.png">
+    <meta property="og:description"
+        content="The only private, offline journal that locks at midnight to keep you moving forward. 100% private. 100% focused.">
+    <meta property="og:image" content="https://www.usetoday.space/og_image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.usetoday.space/">
     <meta property="twitter:title" content="Today — Close the 47 Tabs in Your Brain.">
-    <meta property="twitter:description" content="Turn mental clutter into daily momentum. The journal that locks at midnight so you can't live in the past.">
-    <meta property="twitter:image" content="https://www.usetoday.space/preview.png">
+    <meta property="twitter:description"
+        content="Turn mental clutter into daily momentum. The journal that locks at midnight so you can't live in the past.">
+    <meta property="twitter:image" content="https://www.usetoday.space/og_image.png">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -131,7 +134,8 @@
         }
     </script>
     <style>
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
             position: relative;
@@ -178,14 +182,19 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transform: rotate(45deg);
             animation: shimmer 6s infinite;
         }
 
         @keyframes shimmer {
-            0% { transform: translateX(-150%) rotate(45deg); }
-            100% { transform: translateX(150%) rotate(45deg); }
+            0% {
+                transform: translateX(-150%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(150%) rotate(45deg);
+            }
         }
 
         .text-glow {
@@ -193,17 +202,17 @@
         }
 
         .card-premium {
-            background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.05);
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .card-premium:hover {
-            background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
             border-color: rgba(255, 92, 0, 0.3);
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5), inset 0 1px 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .feature-icon-wrapper {
@@ -230,7 +239,7 @@
             position: absolute;
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(255,92,0,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 92, 0, 0.05) 0%, transparent 70%);
             border-radius: full;
             pointer-events: none;
             z-index: 0;
@@ -314,11 +323,11 @@
     <div class="w-full md:max-w-[1200px] md:border-l md:border-r border-gridLine mx-auto flex flex-col relative z-10">
 
         <!-- NAVBAR -->
-        <nav
-            class="flex items-center justify-between p-6 md:p-8 bg-transparent sticky top-0 z-50">
+        <nav class="flex items-center justify-between p-6 md:p-8 bg-transparent sticky top-0 z-50">
             <div class="flex items-center gap-8 lg:gap-12">
                 <a href="#" class="flex items-center gap-3 font-semibold text-xl tracking-wide">
-                    <img src="./assets/48x48.png" alt="Today — The Private Offline Journaling App" class="w-8 h-8 rounded">
+                    <img src="./assets/48x48.png" alt="Today — The Private Offline Journaling App"
+                        class="w-8 h-8 rounded">
                     Today.
                 </a>
                 <div class="hidden lg:flex gap-8 text-[13px] text-textMuted font-medium">
@@ -373,9 +382,15 @@
             class="relative flex flex-col items-center text-center px-5 sm:px-8 pt-16 pb-20 sm:pt-20 sm:pb-24 md:pt-24 md:pb-32 overflow-hidden z-10">
 
             <!-- Deep Ambient Glows -->
-            <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none opacity-50"></div>
-            <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="absolute top-0 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div
+                class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none opacity-50">
+            </div>
+            <div
+                class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute top-0 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
 
             <!-- Grid background -->
             <div class="absolute inset-0 pointer-events-none"
@@ -390,10 +405,13 @@
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                <span class="font-mono text-[9px] sm:text-[10px] text-textMuted tracking-[0.1em] sm:tracking-[0.2em] uppercase font-medium text-center px-2">
+                <span
+                    class="font-mono text-[9px] sm:text-[10px] text-textMuted tracking-[0.1em] sm:tracking-[0.2em] uppercase font-medium text-center px-2">
                     100% Offline &nbsp;·&nbsp; No Account &nbsp;·&nbsp; No Cloud
                 </span>
-                <div class="absolute inset-0 rounded-full bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div
+                    class="absolute inset-0 rounded-full bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
             </div>
 
             <!-- Headline -->
@@ -406,8 +424,10 @@
             <!-- Subtext -->
             <p data-aos="fade-up" data-aos-delay="250" class="relative text-textMuted leading-relaxed mb-12 mx-auto"
                 style="font-size: clamp(17px, 1.5vw, 20px); max-weight: 400; max-width: 650px;">
-                One page. One day. <span class="text-white font-medium">Zero second-guessing.</span><br class="hidden sm:block"> 
-                The private, offline <span class="text-white font-medium">Today Journal</span> that locks at midnight to keep you moving forward.
+                One page. One day. <span class="text-white font-medium">Zero second-guessing.</span><br
+                    class="hidden sm:block">
+                The private, offline <span class="text-white font-medium">Today Journal</span> that locks at midnight to
+                keep you moving forward.
             </p>
 
             <!-- CTAs -->
@@ -427,11 +447,14 @@
             <!-- Trust strip -->
             <div data-aos="fade-up" data-aos-delay="450"
                 class="relative flex flex-wrap items-center justify-center gap-x-8 gap-y-3 opacity-60 hover:opacity-100 transition-opacity duration-500">
-                <span class="flex items-center gap-2 text-[12px] font-medium text-textMuted"><i class="fa-solid fa-circle-check text-primary/80"></i> No account required</span>
+                <span class="flex items-center gap-2 text-[12px] font-medium text-textMuted"><i
+                        class="fa-solid fa-circle-check text-primary/80"></i> No account required</span>
                 <span class="w-1 h-1 bg-textDark rounded-full hidden sm:block"></span>
-                <span class="flex items-center gap-2 text-[12px] font-medium text-textMuted"><i class="fa-solid fa-circle-check text-primary/80"></i> Works fully offline</span>
+                <span class="flex items-center gap-2 text-[12px] font-medium text-textMuted"><i
+                        class="fa-solid fa-circle-check text-primary/80"></i> Works fully offline</span>
                 <span class="w-1 h-1 bg-textDark rounded-full hidden sm:block"></span>
-                <span class="flex items-center gap-2 text-[12px] font-medium text-textMuted"><i class="fa-solid fa-circle-check text-primary/80"></i> One-time purchase</span>
+                <span class="flex items-center gap-2 text-[12px] font-medium text-textMuted"><i
+                        class="fa-solid fa-circle-check text-primary/80"></i> One-time purchase</span>
             </div>
         </section>
 
@@ -462,7 +485,118 @@
                 </div>
                 <div
                     class="relative bg-bgDark rounded-xl overflow-hidden aspect-[16/9] shadow-inner z-10 border border-gridLine">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/WuKIZuUeeY8" title="Introducing Today: A Journaling App That Doesn’t Let You Edit the Past" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/WuKIZuUeeY8"
+                        title="Introducing Today: A Journaling App That Doesn’t Let You Edit the Past" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOBILE APP SECTION (Strategic Placement: Post-Video) -->
+        <section class="relative border-t border-gridLine overflow-hidden bg-gradient-to-b from-bgDark to-[#0F0A05]">
+            <!-- Decorative Glows -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none">
+            </div>
+            <div
+                class="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="flex flex-col lg:flex-row relative z-10">
+                <div data-aos="fade-right" class="w-full lg:w-[45%] flex flex-col lg:border-r border-gridLine">
+                    <div class="p-8 sm:p-12 lg:p-16 flex-grow flex flex-col justify-center">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 mb-8 w-max">
+                            <span class="flex h-1.5 w-1.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span>
+                            </span>
+                            <span class="font-mono text-[10px] text-primary tracking-widest uppercase font-bold">New
+                                Mobile App</span>
+                        </div>
+                        <h2 class="text-[32px] md:text-[44px] leading-[1.1] font-bold mb-6 text-white tracking-tight">
+                            Your focus. <br>Now in your <span class="text-primary italic font-serif">pocket.</span>
+                        </h2>
+                        <p class="text-textMuted text-[15px] leading-relaxed max-w-[90%] mb-10">
+                            Experience the same zero-clutter, midnight-locking journal on your phone. Built for deep
+                            thinking on the go — with 100% offline privacy guaranteed.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-surface border border-gridLine flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fa-solid fa-shapes text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-[13px] font-bold text-white mb-1">Widgets</h4>
+                                    <p class="text-[11px] text-textMuted leading-tight">Write directly from your home
+                                        screen.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-surface border border-gridLine flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fa-solid fa-bell text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-[13px] font-bold text-white mb-1">Gentle Prompts</h4>
+                                    <p class="text-[11px] text-textMuted leading-tight">Reminders to lock in your daily
+                                        thought.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 border-t border-gridLine/50 flex flex-col gap-4">
+                            <a target="_blank" href="https://usetoday.short.gy/EpkPs3"
+                                class="shimmer-btn inline-flex items-center justify-center gap-3 bg-white text-black font-bold text-[15px] px-8 py-4 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
+                                <i class="fa-brands fa-android text-xl"></i>
+                                Start 7-Day Free Trial
+                            </a>
+                            <p class="text-[10px] text-textMuted text-center font-mono uppercase tracking-widest">No
+                                card needed · Instant Access</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshots Gallery -->
+                <div data-aos="fade-left"
+                    class="w-full lg:w-[55%] h-[500px] sm:h-[650px] relative overflow-hidden bg-surface/30 flex gap-6 p-8 items-center justify-center border-t lg:border-t-0 border-gridLine">
+                    <!-- Glassy overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-bgDark/80 via-transparent to-bgDark/20 z-10 pointer-events-none">
+                    </div>
+
+                    <div class="w-1/2 h-[1200px] flex flex-col gap-6 animate-marquee-up relative -top-[200px]">
+                        <img src="./screenshots/flutter_01.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                        <img src="./screenshots/flutter_04.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                        <img src="./screenshots/flutter_03.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                        <img src="./screenshots/flutter_01.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                    </div>
+                    <div class="w-1/2 h-[1200px] flex flex-col gap-6 animate-marquee-down relative top-[200px]">
+                        <img src="./screenshots/flutter_02.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                        <img src="./screenshots/flutter_05.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                        <img src="./screenshots/flutter_06.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                        <img src="./screenshots/flutter_02.png"
+                            alt="Today App Android Interface - Private Offline Journaling"
+                            class="rounded-[2rem] border-[1px] border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full">
+                    </div>
                 </div>
             </div>
         </section>
@@ -488,15 +622,18 @@
                 class="w-full md:w-1/2 p-10 lg:p-14 md:border-r border-b md:border-b-0 border-gridLine flex flex-col relative z-10">
                 <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gridLine bg-surface mb-8 w-max">
-                    <span class="font-mono text-[10px] text-textMuted tracking-widest uppercase font-bold">The Problem</span>
+                    <span class="font-mono text-[10px] text-textMuted tracking-widest uppercase font-bold">The
+                        Problem</span>
                 </div>
                 <h2 class="text-[28px] lg:text-[32px] leading-[1.2] font-medium mb-8 text-white/90">
-                    Most apps turned your thoughts<br>into <span class="font-serif italic text-textMuted">more work.</span>
+                    Most apps turned your thoughts<br>into <span class="font-serif italic text-textMuted">more
+                        work.</span>
                 </h2>
                 <div class="flex flex-col gap-1">
                     <div class="pain-line border-white/5">
                         <span class="text-textDark text-[16px] mt-0.5 flex-shrink-0">→</span>
-                        <p class="text-[14px] text-textMuted leading-relaxed">Complex systems are a second job. You're organizing
+                        <p class="text-[14px] text-textMuted leading-relaxed">Complex systems are a second job. You're
+                            organizing
                             your organization system.</p>
                     </div>
                     <div class="pain-line border-white/5">
@@ -520,7 +657,8 @@
             <div data-aos="fade-left" class="w-full md:w-1/2 p-10 lg:p-14 flex flex-col relative z-10">
                 <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 mb-8 w-max">
-                    <span class="font-mono text-[10px] text-primary tracking-widest uppercase font-bold">The Solution</span>
+                    <span class="font-mono text-[10px] text-primary tracking-widest uppercase font-bold">The
+                        Solution</span>
                 </div>
                 <h2 class="text-[28px] lg:text-[32px] leading-[1.2] font-medium mb-8 text-white">
                     One page. One day.<br><span class="text-primary italic font-serif">Done.</span>
@@ -528,22 +666,26 @@
                 <div class="flex flex-col gap-1">
                     <div class="pain-line" style="border-color: rgba(255,92,0,0.12);">
                         <span class="text-primary text-[18px] mt-0.5 flex-shrink-0">✓</span>
-                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">Open, write, done. No folders, no labels,
+                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">Open, write, done. No folders,
+                            no labels,
                             no setup required.</p>
                     </div>
                     <div class="pain-line" style="border-color: rgba(255,92,0,0.12);">
                         <span class="text-primary text-[18px] mt-0.5 flex-shrink-0">✓</span>
-                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">Memory Rail resurfaces past thoughts —
+                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">Memory Rail resurfaces past
+                            thoughts —
                             exactly when you need them.</p>
                     </div>
                     <div class="pain-line" style="border-color: rgba(255,92,0,0.12);">
                         <span class="text-primary text-[18px] mt-0.5 flex-shrink-0">✓</span>
-                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">Locks at midnight. You move forward — not
+                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">Locks at midnight. You move
+                            forward — not
                             backward.</p>
                     </div>
                     <div class="pain-line" style="border-color: rgba(255,92,0,0.12);">
                         <span class="text-primary text-[18px] mt-0.5 flex-shrink-0">✓</span>
-                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">100% offline. Your words never leave your
+                        <p class="text-[14px] text-white/90 leading-relaxed font-medium">100% offline. Your words never
+                            leave your
                             device. Ever.</p>
                     </div>
                 </div>
@@ -569,8 +711,11 @@
                         <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-[16px] mb-3">Memory Rail</h3>
-                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">As you write, past thoughts return at exactly the right moment — without ever searching.</p>
-                    <span class="mt-auto text-[10px] font-mono text-primary tracking-widest uppercase font-bold">Proprietary AI</span>
+                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">As you write, past thoughts return at
+                        exactly the right moment — without ever searching.</p>
+                    <span
+                        class="mt-auto text-[10px] font-mono text-primary tracking-widest uppercase font-bold">Proprietary
+                        AI</span>
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="200"
@@ -579,8 +724,10 @@
                         <i class="fa-solid fa-keyboard text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-[16px] mb-3">Keyboard First</h3>
-                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">No clicks, no menus breaking your train of thought. Open and write. Today stays out of your way.</p>
-                    <span class="mt-auto text-[10px] font-mono text-textDark tracking-widest uppercase font-bold">Focus Engine</span>
+                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">No clicks, no menus breaking your train
+                        of thought. Open and write. Today stays out of your way.</p>
+                    <span class="mt-auto text-[10px] font-mono text-textDark tracking-widest uppercase font-bold">Focus
+                        Engine</span>
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="300"
@@ -589,8 +736,10 @@
                         <i class="fa-solid fa-wifi text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-[16px] mb-3">100% Offline</h3>
-                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">No cloud. No tracking. No account. Your thoughts never leave your device. Ever.</p>
-                    <span class="mt-auto text-[10px] font-mono text-textDark tracking-widest uppercase font-bold">Hard Privacy</span>
+                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">No cloud. No tracking. No account. Your
+                        thoughts never leave your device. Ever.</p>
+                    <span class="mt-auto text-[10px] font-mono text-textDark tracking-widest uppercase font-bold">Hard
+                        Privacy</span>
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="400"
@@ -599,75 +748,23 @@
                         <i class="fa-solid fa-lock text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-[16px] mb-3">Immutable History</h3>
-                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">After 24 hours, your page locks. Stop re-editing yesterday — and start stronger tomorrow.</p>
-                    <span class="mt-auto text-[10px] font-mono text-primary tracking-widest uppercase font-bold">Momentum Lock</span>
+                    <p class="text-[13px] text-textMuted leading-relaxed mb-6">After 24 hours, your page locks. Stop
+                        re-editing yesterday — and start stronger tomorrow.</p>
+                    <span
+                        class="mt-auto text-[10px] font-mono text-primary tracking-widest uppercase font-bold">Momentum
+                        Lock</span>
                 </div>
             </div>
         </section>
 
-        <!-- MOBILE APP SECTION -->
-        <section class="flex flex-col lg:flex-row border-t border-gridLine overflow-hidden">
-            <div data-aos="fade-right" class="w-full lg:w-[45%] flex flex-col lg:border-r border-gridLine">
-                <div class="p-6 sm:p-10 lg:p-12 border-b border-gridLine flex-grow flex flex-col justify-center">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 mb-6 w-max">
-                        <span class="font-mono text-[10px] text-primary tracking-wider uppercase">New Mobile App</span>
-                    </div>
-                    <h2 class="text-2xl md:text-[32px] leading-tight font-medium mb-4">Write once. Stay clear all day.</h2>
-                    <p class="text-textMuted text-[13px] leading-relaxed max-w-[90%] mb-6">
-                        The same focus-first experience on Android. Capture what matters, get reminded, and keep your
-                        momentum wherever you are.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-[13px] text-textMuted"><i
-                                class="fa-solid fa-shapes text-primary text-sm w-4"></i> Home-screen widgets</li>
-                        <li class="flex items-center gap-3 text-[13px] text-textMuted"><i
-                                class="fa-solid fa-bell text-primary text-sm w-4"></i> Daily reminders</li>
-                        <li class="flex items-center gap-3 text-[13px] text-textMuted"><i
-                                class="fa-solid fa-cloud-arrow-up text-primary text-sm w-4"></i> Backup &amp; export
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 sm:p-10 lg:p-12">
-                    <a target="_blank" href="https://usetoday.short.gy/EpkPs3"
-                        class="text-primary font-medium text-[15px] flex items-center gap-2 hover:opacity-80 transition-opacity">
-                        <i class="fa-brands fa-android"></i> Get Android App <span
-                            class="text-lg leading-none">&rsaquo;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Screenshots Marquee -->
-            <div data-aos="fade-left"
-                class="w-full lg:w-[55%] h-[350px] sm:h-[500px] relative overflow-hidden bg-surface flex gap-4 p-4 items-center justify-center border-t lg:border-t-0 border-gridLine mask-bottom-fade">
-                <div class="w-1/2 h-[800px] flex flex-col gap-4 animate-marquee-up relative -top-[100px]">
-                    <img src="./screenshots/flutter_01.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                    <img src="./screenshots/flutter_04.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                    <img src="./screenshots/flutter_03.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                    <img src="./screenshots/flutter_01.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                </div>
-                <div class="w-1/2 h-[800px] flex flex-col gap-4 animate-marquee-down relative top-[100px]">
-                    <img src="./screenshots/flutter_02.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                    <img src="./screenshots/flutter_05.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                    <img src="./screenshots/flutter_06.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                    <img src="./screenshots/flutter_02.png" alt="Today App Android Interface - Private Offline Journaling"
-                        class="rounded-[1.5rem] border-[4px] border-gridLine shadow-2xl w-full">
-                </div>
-            </div>
-        </section>
+        <!-- SHOWCASE SECTION (Video) -->
 
         <!-- HOW IT WORKS -->
         <section id="how-it-works" class="border-t border-gridLine flex flex-col">
             <div data-aos="fade-up" class="flex flex-col md:flex-row border-b border-gridLine">
                 <div class="w-full md:w-[60%] p-6 sm:p-10 lg:p-12 md:border-r border-gridLine">
-                    <h2 class="text-2xl md:text-[32px] leading-tight font-medium mb-4">A daily ritual you'll actually stick to.</h2>
+                    <h2 class="text-2xl md:text-[32px] leading-tight font-medium mb-4">A daily ritual you'll actually
+                        stick to.</h2>
                     <p class="text-textMuted text-[13px] leading-relaxed max-w-[80%]">
                         3 steps. Under 5 minutes. Every single day.
                     </p>
@@ -790,16 +887,20 @@
                     saying</span>
             </div>
             <!-- TESTIMONIALS -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 sm:p-10 lg:p-12 border-b border-gridLine bg-[#09090B]">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 sm:p-10 lg:p-12 border-b border-gridLine bg-[#09090B]">
                 <div data-aos="fade-up" data-aos-delay="100"
                     class="bg-surface/50 border border-gridLine rounded-2xl p-6 flex flex-col gap-4 hover:border-primary/30 transition group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
                         <i class="fa-brands fa-product-hunt text-2xl"></i>
                     </div>
                     <div class="flex gap-1 text-primary text-[10px]">★★★★★</div>
-                    <p class="text-[14px] text-white/90 leading-relaxed font-serif italic">"I've tried every PKM system out there. Obsidian, heavy-duty apps, you name it. Today is the only one that actually stuck because it doesn't ask me to organize anything. It just lets me think."</p>
+                    <p class="text-[14px] text-white/90 leading-relaxed font-serif italic">"I've tried every PKM system
+                        out there. Obsidian, heavy-duty apps, you name it. Today is the only one that actually stuck
+                        because it doesn't ask me to organize anything. It just lets me think."</p>
                     <div class="mt-auto pt-4 border-t border-gridLine/50 flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100" alt="Mark D." class="w-10 h-10 rounded-full border border-gridLine object-cover">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100"
+                            alt="Mark D." class="w-10 h-10 rounded-full border border-gridLine object-cover">
                         <div>
                             <div class="text-[13px] font-semibold text-white flex items-center gap-1.5">
                                 Mark D. <i class="fa-solid fa-circle-check text-primary text-[10px]"></i>
@@ -815,9 +916,12 @@
                         <i class="fa-brands fa-x-twitter text-xl"></i>
                     </div>
                     <div class="flex gap-1 text-primary text-[10px]">★★★★★</div>
-                    <p class="text-[14px] text-white/90 leading-relaxed font-serif italic">"The Memory Rail is spooky. I was writing about a project hurdle and it surfaced a solution I'd jotted down three months ago. Genuinely felt like I had a second brain working with me."</p>
+                    <p class="text-[14px] text-white/90 leading-relaxed font-serif italic">"The Memory Rail is spooky. I
+                        was writing about a project hurdle and it surfaced a solution I'd jotted down three months ago.
+                        Genuinely felt like I had a second brain working with me."</p>
                     <div class="mt-auto pt-4 border-t border-gridLine/50 flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100&h=100" alt="Jorge V." class="w-10 h-10 rounded-full border border-gridLine object-cover">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100&h=100"
+                            alt="Jorge V." class="w-10 h-10 rounded-full border border-gridLine object-cover">
                         <div>
                             <div class="text-[13px] font-semibold text-white flex items-center gap-1.5">
                                 Jorge V. <i class="fa-solid fa-circle-check text-primary text-[10px]"></i>
@@ -833,9 +937,12 @@
                         <i class="fa-brands fa-product-hunt text-2xl"></i>
                     </div>
                     <div class="flex gap-1 text-primary text-[10px]">★★★★★</div>
-                    <p class="text-[14px] text-white/90 leading-relaxed font-serif italic">"That 24-hour lock changed everything for me. I used to spend hours re-editing old entries. Now I just write, let it lock, and move on. My anxiety is down 50% since I started."</p>
+                    <p class="text-[14px] text-white/90 leading-relaxed font-serif italic">"That 24-hour lock changed
+                        everything for me. I used to spend hours re-editing old entries. Now I just write, let it lock,
+                        and move on. My anxiety is down 50% since I started."</p>
                     <div class="mt-auto pt-4 border-t border-gridLine/50 flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" alt="Sarah J." class="w-10 h-10 rounded-full border border-gridLine object-cover">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100"
+                            alt="Sarah J." class="w-10 h-10 rounded-full border border-gridLine object-cover">
                         <div>
                             <div class="text-[13px] font-semibold text-white flex items-center gap-1.5">
                                 Sarah J. <i class="fa-solid fa-circle-check text-primary text-[10px]"></i>
@@ -1163,7 +1270,8 @@
         <footer class="border-t border-gridLine flex flex-col md:flex-row bg-[#050505]">
             <div class="w-full md:w-1/2 p-10 lg:p-14 md:border-r border-b md:border-b-0 border-gridLine flex flex-col">
                 <a href="#" class="flex items-center gap-3 font-semibold text-xl tracking-wide mb-6">
-                    <img src="./assets/48x48.png" alt="Today — The Private Offline Journaling App" class="w-8 h-8 rounded">
+                    <img src="./assets/48x48.png" alt="Today — The Private Offline Journaling App"
+                        class="w-8 h-8 rounded">
                     Today.
                 </a>
                 <p class="text-[12px] text-textMuted max-w-[280px] mb-12 leading-relaxed">
@@ -1214,7 +1322,8 @@
             <div class="text-center mb-8">
                 <div
                     class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 mb-4">
-                    <img src="./assets/48x48.png" alt="Today — The Private Offline Journaling App" width="24" height="24" class="rounded">
+                    <img src="./assets/48x48.png" alt="Today — The Private Offline Journaling App" width="24"
+                        height="24" class="rounded">
                 </div>
                 <h3 class="text-2xl font-serif text-white mb-2">Get Today.</h3>
                 <p class="text-textMuted text-sm leading-relaxed">Choose your platform. 7-day free trial, no card
